@@ -13,7 +13,8 @@ config.cdnFreeRootMap = {
     en: config.host
 };
 
-config.galleryPath = 'https://echarts.apache.org/examples/';
+// config.galleryPath = 'https://echarts.apache.org/examples/';//tanglei
+config.galleryPath = 'http://localhost/echarts-website/examples/';
 config.releaseDestDir = path.resolve(__dirname, '../../echarts-website');
 
 module.exports = config;

@@ -50,6 +50,8 @@ if [ ! -d "${themeProjectDir}" ]; then
 fi
 cd ${themeProjectDir}
 node build.js --release
+echo "Build theme builder done."
+cd ${currWorkingDir}
 
 # Build doc
 echo "Build doc ..."
@@ -70,13 +72,13 @@ if [ ! -d "${examplesProjectDir}" ]; then
     exit 1
 fi
 cd ${examplesProjectDir}
-npm run release
+npm run localsite
 cd ${currWorkingDir}
 echo "Build examples done."
 
 # Build SPA pages.
-cd ${thisScriptDir}
-node releasePages.js
+#cd ${thisScriptDir}
+#node releasePages.js
 
 # Build www
 echo "Build www ..."
